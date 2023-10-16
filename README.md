@@ -1,4 +1,4 @@
-![thumbnail-Praticando CSS_ Grid e Flexbox]
+[thumbnail-Praticando CSS_ Grid e Flexbox]
 
 # ![image](https://user-images.githubusercontent.com/76708357/191308741-fb59ba6c-8750-4e09-873b-6ab2e96225b7.png) CulturaEmBalada 
 
