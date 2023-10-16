@@ -1,0 +1,151 @@
+/* Cabeçalho */
+/*Algumas tarefas que consideramos básicas em um leiaute, 
+como centralização vertical de um elemento-filho com relação a um elemento-pai 
+ou fazer com que elementos-filhos ocupem a mesma quantidade de espaço, 
+ou colunas terem o mesmo tamanho independente da quantidade de conteúdo interno, 
+eram impossíveis ou muito difíceis de serem manejadas com floats ou position, 
+ao menos de forma prática e flexível.
+A ferramenta Flexbox (de Flexible Box) foi criada para tornar essas tarefas 
+mais simples e funcionais: os filhos de um elemento com Flexbox podem se posicionar 
+em qualquer direção e pode ter dimensões flexíveis para se adaptar.*/
+
+.menu {
+    display: flex; /*Ao aplicar o dysplay com valor flex em uma section, 
+    essa se torna um container e seus itens se tornam flex itens*/
+    justify-content: space-evenly; /*Ajusta espaçamento entre os flex itens*/
+    align-items: center; /*Ajusta, inclusive, o espaçamento vertical*/
+    flex-wrap: wrap; /*Espaçamento com quebra de linha nos flex itens*/
+    column-gap: 33px; /*Organiza número e quantidade de colunas*/
+
+    /*A propriedade gap do flexbox e grid, é utilizada para aplicar distância 
+    no sentido horizontal e vertical entre elementos em um layout, 
+    sua função é similar à propriedade margin column-gap.
+    A propriedade column-gap serve para criar uma lacuna vertical entre elementos. 
+    Já a propriedade row-gap serve para criar uma lacuna horizontal entre elementos.
+    E caso você utilize simplesmente a propriedade gap, ela irá criar espaçamentos 
+    tanto no sentido vertical quanto horizontal.
+    */
+}
+
+
+/* Categorias */
+
+.categorias__lista {
+    display: flex;
+    flex-direction: column;
+    row-gap: .5rem;
+}
+
+/* Destaques */
+
+.destaques {
+    display: flex;
+    align-items: center;
+    column-gap: 10px;
+}
+
+.destaques__barra {
+    flex-grow: 1;
+}
+
+/* Eventos */
+
+.eventos__lista {
+    display: flex;
+    flex-wrap: wrap;
+    column-gap: 1.5rem;
+    row-gap: 1rem;
+    justify-content: center;
+}
+
+.eventos__item {
+    flex-grow: 1;
+    max-width: 400px;
+}
+
+/*Agenda ATIVIDADE PARA SABER MAIS */
+
+.agenda__lista {
+    display: flex;
+    flex-wrap: wrap;
+    row-gap: 1rem;
+    column-gap: 1.5rem;
+    justify-content: center;
+}
+
+.agenda__item {
+    flex-grow: 1;
+}
+
+/* Rodapé */ 
+
+.rodape {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+
+.rodape__logo {
+    align-self: end;
+}
+
+@media (min-width: 720px) {
+
+    /* Cabeçalho, alterações para telas acima de tablet, ou seja, >720px*/
+    .menu {
+        column-gap: 75px;
+    }
+
+    /* Categorias */
+
+    .categorias__lista {
+        flex-wrap: wrap;
+        column-gap: 1.5rem;
+        row-gap: 1rem;
+    }
+
+    /* Eventos */
+
+    .eventos__lista {
+        justify-content: end;
+    }
+
+    /*Agenda ATIVIDADE PARA SABER MAIS */
+
+    .agenda__lista {
+        justify-content: end;
+
+    }
+
+}
+
+@media (min-width: 1440px) {
+
+    /* Cabeçalho */
+
+    .menu {
+        column-gap: 105px;
+        flex-wrap: nowrap;
+    }
+
+    .menu__item:nth-child(1) {
+        order: 1;
+    }
+
+    .menu__item:nth-child(2) {
+        order: 3;
+    }
+
+    .menu__item:nth-child(3) {
+        order: 4;
+    }
+
+    .menu__item:nth-child(4) {
+        order: 5;
+    }
+
+    .menu__item:nth-child(5) {
+        order: 2;
+    }
+
+}
